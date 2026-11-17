@@ -1,0 +1,11 @@
+{
+	"name": "LS_ADLS",
+	"properties": {
+		"description": "FOR ADLS LINKED TO ADF",
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://caresyncccproject.dfs.core.windows.net/"
+		}
+	}
+}
