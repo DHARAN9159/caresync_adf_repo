@@ -85,8 +85,7 @@
 					"sink": {
 						"type": "ParquetSink",
 						"storeSettings": {
-							"type": "AzureBlobFSWriteSettings",
-							"copyBehavior": "PreserveHierarchy"
+							"type": "AzureBlobFSWriteSettings"
 						},
 						"formatSettings": {
 							"type": "ParquetWriteSettings"
@@ -110,12 +109,12 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "Adls_parquet",
+						"referenceName": "DS_Adls_parquet",
 						"type": "DatasetReference",
 						"parameters": {
 							"container": "landing",
 							"folder": {
-								"value": "@concat(\n    activity('Read Table details').output.firstRow.source_system,\n    '/',\n    activity('Read Table details').output.firstRow.source_table_name,\n    '/',\n    variables('Start time')\n\n)",
+								"value": "@concat(\n    activity('Read Table details').output.firstRow.source_system,\n    '/',\n    activity('Read Table details').output.firstRow.source_table_name,\n    '/',\n    variables('Start time')\n)",
 								"type": "Expression"
 							}
 						}

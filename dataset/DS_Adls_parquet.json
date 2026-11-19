@@ -1,5 +1,5 @@
 {
-	"name": "Adls_parquet",
+	"name": "DS_Adls_parquet",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "LS_ADLS",
@@ -17,7 +17,8 @@
 		"type": "Parquet",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobFSLocation"
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "landing"
 			},
 			"compressionCodec": "snappy"
 		},
